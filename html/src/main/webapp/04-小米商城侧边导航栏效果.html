@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04-小米商城侧边导航栏</title>
+    <style type="text/css">
+        /*添加背景渐变效果*/
+        body{
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(to right,coral,lightgreen);
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+        }
+        .menu{
+            width: 300px;
+            /*height: 500px;*/
+            background-color: rgba(255,255,255,0.6);
+            margin: 10px auto 0px; /*页面居中*/
+            /*border: 1px solid #f8f8f8;*/
+        }
+        .menu ul{
+            /*border: 1px solid red;*/
+            padding: 10px 0;
+        }
+        .menu ul li{
+            list-style: none;
+            /*border: 1px solid blue;*/
+            /*padding-left: 25px; 不在这里加padding，因为a需要在每一行的任何位置都能跳转页面*/
+            height: 42px; /*使li盒子高度变为42px*/
+            line-height: 42px; /*文字居中*/
+        }
+        .menu ul li a{
+            /*a为行内元素，不能改变其所占位置的大小，需要变成块级元素*/
+            display: block;
+            text-decoration: none;
+            /*border: 1px solid blue;*/
+            text-indent: 2em; /*相当于添加padding，两个空格*/
+            color: black;
+            font-weight: bold;
+            background-size: 30px;
+            background-image: url("img04/black.png");
+            background-repeat: no-repeat;
+            background-position: 255px 6px;/*离左边的距离，上下的距离*/
+            /*background: url("img04/black.png") no-repeat 255px 6px;*/
+        }
+        .menu ul li a:hover{
+            color: #f8f8f8;
+            background-color: coral;
+            background-size: 30px;
+            background-image: url("img04/white.png");
+            background-repeat: no-repeat;
+            background-position: 255px 6px;/*离左边的距离，上下的距离*/
+        }
+    </style>
+</head>
+<body>
+<div class="menu">
+    <ul>
+        <li><a href="01-如何利用边框制作三角形.html" target="_blank">手机</a></li>
+        <li><a href="" target="_blank">电视</a></li>
+        <li><a href="" target="_blank">笔记本 平板</a></li>
+        <li><a href="" target="_blank">家电</a></li>
+        <li><a href="" target="_blank">出行 穿戴</a></li>
+        <li><a href="" target="_blank">智能 路由器</a></li>
+        <li><a href="" target="_blank">电源 配件</a></li>
+        <li><a href="" target="_blank">生活 箱包</a></li>
+    </ul>
+</div>
+
+</body>
+</html>

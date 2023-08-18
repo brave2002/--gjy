@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12-带左右按钮自动轮播图效果</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            /*color: white;*/
+        }
+        .banner{
+            width: 1000px;
+            height: 370px;
+            background-color: red;
+            margin: 40px auto 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .banner ul{
+            width: 1000000px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 370px;
+            /*position: relative;*/
+        }
+        .banner ul li{
+            width: 1000px;
+            height: 370px;
+            float: left;
+            /*position: absolute;*/
+            /*top: 0;*/
+            /*overflow: hidden;*/
+
+        }
+        .banner .pre,.banner .next{
+            width: 41px;
+            height: 69px;
+            /*background-color: red;*/
+            position: absolute;
+            top: 50%;
+            margin-top: -35px;
+            line-height: 65px;
+            text-align: center;
+        }
+        .banner .pre{
+
+            left: 0;
+        }
+        .banner .pre a:hover p,.banner .next a:hover p{
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+        }
+        .banner .pre p,.banner .next p{
+            font-size: 41px;
+            color: #8D8D8D;
+        }
+        .banner .next {
+
+            right: 0;
+        }
+        .banner .bottom{
+            width: 100%;
+            height: 60px;
+            background-color: rgba(0,0,0,0.5);
+            position: absolute;
+            bottom: 0;
+            font-size: 0;
+            text-align: center;
+            line-height: 60px;
+        }
+        .banner .bottom span{
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            /*position: absolute;*/
+            /*bottom: 30px;*/
+            display: inline-block;
+            border-radius: 50%;
+            margin: 0 5px;
+            vertical-align: middle;
+        }
+        .banner .bottom a:hover span{
+            background-color: deeppink;
+        }
+    </style>
+</head>
+<body>
+<div class="banner">
+    <ul>
+        <li><img src="img12/03.jpg" alt="" width="1000"></li>
+        <li><img src="img12/02.jpg" alt="" width="1000"></li>
+        <li><img src="img12/01.jpg" alt="" width="1000"></li>
+    </ul>
+    <div class="pre">
+        <a href=""><p>&lt;</p></a>
+    </div>
+    <div class="next">
+        <a href=""><p>&gt;</p></a>
+    </div>
+    <div class="bottom">
+        <a href=""><span class="circle01"></span></a>
+        <a href=""><span class="circle02"></span></a>
+        <a href=""><span class="circle03"></span></a>
+    </div>
+</div>
+</body>
+</html>

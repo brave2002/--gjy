@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>form 表单页面</title>
+</head>
+<body>
+<form action="#" method="" style="width: 245px;">
+    用户名：<input type="text" id="username" style="float: right;" /><br/><br/>
+    年龄：<input type="text" id="age" style="float: right;" /><br/><br/>
+    <input type="button" value="提交" id="btn" /><br/><br/>
+</form>
+<script type="text/javascript">
+    var username = document.getElementById('username');
+    var age = document.getElementById('age');
+    var btn = document.getElementById('btn');
+    btn.onclick = function () {
+        var nameValue = username.value;
+        var ageValue = age.value;
+        var xhr = new XMLHttpRequest();
+        var params = 'username=' + nameValue + '&age=' + ageValue;
+        xhr.open('post', 'http://localhost:3000/post');
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onload = function () {
+            console.log(JSON.parse(xhr.responseText));
+        };
+        xhr.send(params);
+    };
+</script>
+</body>
+</html>
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser');
+const app = express();
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.post('/post', (req, res) => {
+res.send(req.body);
+});
+app.listen(3000);
+console.log('服务器启动成功');

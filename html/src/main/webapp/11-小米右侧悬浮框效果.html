@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11-小米右侧悬浮框效果</title>
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        ul{
+            list-style: none;
+        }
+        body{
+            height: 1000px;
+            background-color: #f5f5f5;
+        }
+        .float{
+            width: 80px;
+            /*height: 560px;*/
+            /*background-color: red;*/
+            position: fixed;/*将位置固定*/
+            bottom: 100px;
+            right: 10px;
+        }
+        .float ul li{
+            height: 80px;
+            width: 80px;
+            background-color: white;
+            border-bottom: 1px solid #dddddd;
+            position: relative;
+        }
+        .float ul li:last-child{
+            margin-top: 20px;
+        }
+        .float ul li span{
+            height: 40px;
+            width: 80px;
+            /*background-color: green;*/
+            display: block;
+            font-size: 40px;
+            text-align: center;
+            line-height: 40px;
+            padding-top: 10px;
+            color: #cccccc;
+        }
+        .float ul li p{
+            color: #cccccc;
+            text-align: center;
+            padding-top: 5px;
+            font-size: 14px;
+        }
+        .float ul li .show{
+            height: 120px;
+            width: 120px;
+            background-color: white;
+            position: absolute;
+            top: 0;
+            left: -120px;
+            display: none;
+        }
+        .float ul li .show img{
+            padding: 10px;
+        }
+        .float ul li a:hover span,.float ul li a:hover p{
+            display: block;
+            color: orangered;
+        }
+        .float ul li a:hover .show{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="float">
+        <ul>
+            <li><a href="">
+                <span class="iconfont icon-shouji"></span>
+                <p>手机APP</p>
+                <div class="show">
+                    <img src="iconfont/01.jpg" alt="" width="100">
+                </div>
+            </a></li>
+            <li><a href="">
+                <span class="iconfont icon-geren"></span>
+                <p>个人中心</p>
+            </a></li>
+            <li><a href="">
+                <span class="iconfont icon-gongju"></span>
+                <p>售后服务</p>
+            </a></li>
+            <li><a href="">
+                <span class="iconfont icon-kefu"></span>
+                <p>人工客服</p>
+            </a></li>
+            <li><a href="">
+                <span class="iconfont icon-gouwuche"></span>
+                <p>购物车</p>
+            </a></li>
+            <li><a href="">
+                <span class="iconfont icon-huidingbu"></span>
+                <p>回到顶部</p>
+            </a></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10-酷狗音乐精选歌单效果</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .music{
+            width: 480px;
+            height: 480px;
+            background-color: pink;
+            margin: 20px auto 0;
+            position: relative;
+        }
+        /*.music a{*/
+        /*    position: relative;*/
+        /*}*/
+        .music .top{
+            width: 200px;
+            height: 40px;
+            /*background-color: #f7f7f7;*/
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-image: linear-gradient(to left,rgba(0,0,0,0.5),rgba(255,255,255,0));
+        }
+        .music .top .txt{
+            color: white;
+            width: 60px;
+            height: 40px;
+            /*background-color: red;*/
+            display: inline-block;
+            float: right;
+            line-height: 40px;
+            text-align: right;
+            /*padding-left: 10px;*/
+            padding-right: 10px;
+        }
+        .music .top .icon-earphone{
+            width: 40px;
+            height: 40px;
+            /*background-color: red;*/
+            /*display: inline-block;*/
+            float: right;
+            background-image: url("img10/耳机.png");
+            background-size: 30px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .music .music-text{
+            width: 100%;
+            height: 70px;
+            /*background-image: url("img10/01.jpg");*/
+            position: absolute;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .music .music-text h3{
+            color: white;
+            font-weight: 100;
+            padding: 10px 0 3px 10px;
+        }
+        .music .music-text p{
+            font-size: 14px;
+            color: #ddd;
+            /*padding-top: 0;*/
+            padding-left: 10px;
+        }
+        .music .music-mask{
+            background-color: rgba(0,0,0,0.5);
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            display: none;
+        }
+        .music .player{
+            width: 50px;
+            /*width: 50px;*/
+            height: 50px;
+            /*background-color: red;*/
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-image: url("img10/播放.png");
+            background-repeat: no-repeat;
+            background-size: 50px;
+            background-position: center;
+            display: none;/*不显示*/
+        }
+        .music a:hover .music-mask,.music a:hover .player{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="music">
+    <a href="">
+        <img src="img10/01.jpg" alt="" width="480">
+        <div class="top">
+            <span class="txt">
+                698.5万
+            </span>
+            <span class="icon-earphone">
+
+            </span>
+        </div>
+        <div class="music-text">
+            <h3>乡村之旅：安静惬意，与自然同在</h3>
+            <p>漫婼</p>
+        </div>
+<!--        遮罩处理-->
+        <div class="music-mask">
+        </div>
+        <div class="player">
+
+        </div>
+    </a>
+</div>
+</body>
+</html>

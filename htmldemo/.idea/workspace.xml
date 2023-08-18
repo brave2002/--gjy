@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cabf9ff1-356f-4435-9c79-4f0fc9aeeb55" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="printScope" value="1" />
+    <option name="OUTPUT_DIRECTORY" value="D:\桌面" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="2EmTT3zXkFsLjFGlfW7e8csHoiI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../桌面" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\studysoftware\htmldemo" />
+      <recent name="D:\studysoftware\htmldemo\img\03案例" />
+      <recent name="D:\studysoftware\htmldemo\img" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\studysoftware\htmldemo\img\04案例" />
+      <recent name="D:\studysoftware\htmldemo\img\03案例" />
+      <recent name="D:\studysoftware\htmldemo\img" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.04小米侧边导航栏效果.html">
+    <configuration name="html.htmldemo in htmldemo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="htmldemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="html.htmldemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="html.htmldemo" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="04小米侧边导航栏效果.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/htmldemo/04小米侧边导航栏效果.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="demo2.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/htmldemo/demo2.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="HtmldemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="htmldemo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="html.htmldemo.HtmldemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.04小米侧边导航栏效果.html" />
+        <item itemvalue="JavaScript Debug.demo2.html" />
+        <item itemvalue="JUnit.html.htmldemo in htmldemo" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cabf9ff1-356f-4435-9c79-4f0fc9aeeb55" name="Default Changelist" comment="" />
+      <created>1663199763307</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663199763307</updated>
+      <workItem from="1663199773783" duration="329000" />
+      <workItem from="1663200131254" duration="443000" />
+      <workItem from="1663200607000" duration="59000" />
+      <workItem from="1663200921735" duration="19000" />
+      <workItem from="1663204078299" duration="47000" />
+      <workItem from="1665647131920" duration="5000" />
+      <workItem from="1677807658456" duration="14314000" />
+      <workItem from="1677900300542" duration="32000" />
+      <workItem from="1678249018788" duration="1525000" />
+      <workItem from="1678278091821" duration="44000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="797" y="198" key="FileChooserDialogImpl" timestamp="1677829466533">
+      <screen x="0" y="0" width="1493" height="885" />
+    </state>
+    <state x="797" y="198" key="FileChooserDialogImpl/0.0.1493.885@0.0.1493.885" timestamp="1677829466533" />
+    <state x="135" y="53" key="new project wizard" timestamp="1677842098645">
+      <screen x="0" y="0" width="1493" height="885" />
+    </state>
+    <state x="135" y="53" key="new project wizard/0.0.1493.885@0.0.1493.885" timestamp="1677842098645" />
+  </component>
+</project>

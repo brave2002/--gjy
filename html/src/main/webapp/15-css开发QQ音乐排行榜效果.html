@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15-css开发QQ音乐排行榜效果</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .music{
+            width: 800px;
+            height: 700px;
+            /*border: 2px burlywood solid;*/
+            margin: 50px auto 0;
+        }
+        .music table{
+            width: 100%;
+            /*height: 90px;*/
+            /*background-color: green;*/
+            /*为了清除th和td之间存在的线*/
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+        .music tr th{
+            /*border: 2px solid red;*/
+            height: 80px;
+            background-color: mediumseagreen;
+            font-weight: normal;
+            color: white;
+            text-align: left;
+        }
+        .music tr td{
+            /*border: 2px solid red;*/
+            height: 80px;
+        }
+        /*为了控制每一列的宽度，添加了colgroup标签里面的col标签，span表示1-第几列*/
+        .music colgroup .col1{
+            width: 60px;
+            /*background-color: #b1bbf9;*/
+        }
+        .music colgroup .col2{
+            width: 80px;
+            /*background-color: yellow;*/
+        }
+        .music colgroup .col3{
+
+            /*background-color: red;*/
+        }
+        .music colgroup .col4{
+            width: 120px;
+            /*background-color: pink;*/
+        }
+        .music colgroup .col5{
+            width: 80px;
+            /*background-color: #9a6e3a;*/
+        }
+        .music table tr:nth-child(even){
+            background-color: #dddddd;
+        }
+        .music table tr:nth-child(odd){
+            background-color: white;
+        }
+        /*修改第一列样式*/
+        .music table td:nth-child(1){
+            font-size: 22px;
+            text-align: center;
+
+        }
+        .music table td:nth-child(1) span{
+            color: orangered;
+
+        }
+        /*修改第二列样式*/
+        .music table td:nth-child(2) img{
+            padding-left: 5px;
+
+        }
+        .music table td:nth-child(2) span{
+            display: block;
+            color: grey;
+            font-weight: 100;
+
+        }
+        /*修改第三列样式*/
+        .music table td:nth-child(3){
+            /*text-align: center;*/
+            /*height: 80px;*/
+            /*line-height: 80px;*/
+            /*position: relative;*/
+        }
+        .music table td:nth-child(3) .con{
+            height: 70px;
+            /*border: 1px solid red;*/
+            /*background-color: red;*/
+            position: relative;
+        }
+        .music table td:nth-child(3) .con .txt{
+            /*display: inline-block;*/
+            height: 70px;
+            line-height: 70px;
+            /*background-color: red;*/
+            position: absolute;
+            top: 0;
+            left: 80px;
+            right: 0px;
+            /*bottom: 0;*/
+            /*padding-top: 40px;*/
+            /*line-height: 80px;*/
+            padding-left: 10px;
+            font-size: 12px;
+            color: black;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .txt span{
+            color: grey;
+            padding-left: 10px;
+        }
+        .con .img{
+            height: 70px;
+            width: 150px;
+            /*background-color: red;*/
+            float: right;
+            display: none;
+        }
+        .music .con:hover .img{
+            display: block;
+        }
+        .music tr:hover .con:hover .txt{
+            right: 180px;
+        }
+        /*修改第四列样式*/
+        .music table td:nth-child(4){
+            font-size: 14px;
+        }
+        /*修改第三列样式*/
+        .music table td:nth-child(5){
+            font-size: 14px;
+            color: grey;
+        }
+    </style>
+</head>
+<body>
+<div class="music">
+    <table>
+        <colgroup>
+            <col span="1" class="col1">
+            <col span="1" class="col2">
+            <col span="1" class="col3">
+            <col span="1" class="col4">
+            <col span="1" class="col5">
+        </colgroup>
+        <tr>
+            <th></th>
+            <th>排行</th>
+            <th>歌曲</th>
+            <th>歌手</th>
+            <th>时长</th>
+        </tr>
+        <tr>
+            <td><span>1</span></td>
+            <td>
+                <img src="img15/arrow.png" alt="" width="20px">
+            <span>128%</span></td>
+            <td>
+                <div class="con">
+                    <img src="img15/01.jpg" alt="" width="70"style="text-align: center">
+                    <div class="txt">晚风告白<span>卡不苦不苦吧考虑了稍等是大四</span></div>
+                    <div class="img">
+                        <img src="img15/bofang.png" alt=""width="40px" style="margin: 15px 1px">
+                        <img src="img15/icon_tianjia.png" alt=""width="40px" style="margin: 15px 1px">
+                        <img src="img15/fenxiang.png" alt=""width="40px" style="margin: 15px 1px">
+                    </div>
+                </div>
+            </td>
+            <td>星野</td>
+            <td>03:58</td>
+        </tr>
+        <tr>
+            <td><span>2</span></td>
+            <td><img src="img15/arrow.png" alt="" width="20px">
+                <span>118%</span></td>
+            <td>
+                <div class="con">
+                    <img src="img15/02.jpg" alt="" width="70"style="text-align: center">
+                    <div class="txt">晚风告白<span>卡不苦不苦吧考虑了稍等是大四</span></div>
+                    <div class="img">
+                        <img src="img15/bofang.png" alt=""width="40px" style="margin: 15px 1px">
+                        <img src="img15/icon_tianjia.png" alt=""width="40px" style="margin: 15px 1px">
+                        <img src="img15/fenxiang.png" alt=""width="40px" style="margin: 15px 1px">
+                    </div>
+                </div>
+            </td>
+            <td>王源</td>
+            <td>03:58</td>
+        </tr>
+        <tr>
+            <td><span>3</span></td>
+            <td><img src="img15/arrow.png" alt="" width="20px">
+                <span>108%</span></td>
+            <td>
+                <div class="con">
+                    <img src="img15/03.jpg" alt="" width="70"style="text-align: center">
+                    <div class="txt">晚风告白<span>卡不苦不苦吧考虑了稍等是大四</span></div>
+                    <div class="img">
+                        <img src="img15/bofang.png" alt=""width="40px" style="margin: 15px 1px">
+                        <img src="img15/icon_tianjia.png" alt=""width="40px" style="margin: 15px 1px">
+                        <img src="img15/fenxiang.png" alt=""width="40px" style="margin: 15px 1px">
+                    </div>
+                </div>
+            </td>
+            <td>玥夏</td>
+            <td>03:58</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><img src="img15/arrow.png" alt="" width="20px">
+                <span>98%</span></td>
+            <td><div class="con">
+                <img src="img15/04.jpg" alt="" width="70"style="text-align: center">
+                <div class="txt">晚风告白<span>卡不苦不苦吧考虑了稍等是大四</span></div>
+                <div class="img">
+                    <img src="img15/bofang.png" alt=""width="40px" style="margin: 15px 1px">
+                    <img src="img15/icon_tianjia.png" alt=""width="40px" style="margin: 15px 1px">
+                    <img src="img15/fenxiang.png" alt=""width="40px" style="margin: 15px 1px">
+                </div>
+            </div></td>
+            <td>五月天 阿信</td>
+            <td>03:58</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td><img src="img15/arrow.png" alt="" width="20px">
+                <span>88%</span></td>
+            <td><div class="con">
+                <img src="img15/05.jpg" alt="" width="70"style="text-align: center">
+                <div class="txt">晚风告白<span>卡不苦不苦吧考虑了稍等是大四</span></div>
+                <div class="img">
+                    <img src="img15/bofang.png" alt=""width="40px" style="margin: 15px 1px">
+                    <img src="img15/icon_tianjia.png" alt=""width="40px" style="margin: 15px 1px">
+                    <img src="img15/fenxiang.png" alt=""width="40px" style="margin: 15px 1px">
+                </div>
+            </div></td>
+            <td>林俊杰</td>
+            <td>03:58</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

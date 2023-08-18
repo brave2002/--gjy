@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05-精美的分页效果</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+        }
+        .page{
+            margin: 10px;
+            width: 100%;
+            /*height: 100px;*/
+            background-color: lightblue;
+            /*border: 1px solid red;*/
+            text-align: center;
+            font-size: 0;
+            padding: 10px 0;
+
+        }
+        .page a{
+            /*border: 1px solid #f8f8f8;*/
+            /*width: 30px;*/
+            height: 30px;
+            line-height: 30px;
+            background-color: #f8f8f8;
+            /*行内元素是随着字的大小撑开的，块级元素则独占一行，所以我们需要把它变成行内块级元素*/
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            padding: 0 10px;
+            margin: 0 2px;
+        }
+        .page a:hover{
+            color: palegreen;
+            background-color: gray;
+        }
+        .page a span{
+            /*border: 1px solid red;*/
+            font-size: 20px;
+
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <a href="" target="_blank"><span>&lt</span></a>
+    <a href="" target="_blank"><span>1</span></a>
+    <a href="" target="_blank"><span>2</span></a>
+    <a href="" target="_blank"><span>3</span></a>
+    <a href="" target="_blank"><span>4</span></a>
+    <a href="" target="_blank"><span>5</span></a>
+    <a href="" target="_blank"><span>...</span></a>
+    <a href="" target="_blank"><span>100</span></a>
+    <a href="" target="_blank"><span>&gt</span></a>
+
+</div>
+
+</body>
+</html>

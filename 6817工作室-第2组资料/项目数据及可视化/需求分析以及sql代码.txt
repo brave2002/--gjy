@@ -1,0 +1,120 @@
+1.统计每人购买的商品总数，找出前五
+
+select name, count(product_name) counts
+from (select
+get_json_object(line,'$.user_name')as name,
+get_json_object(line,'$.product_name')as product_name
+from tmp_tmall)a 
+group by name 
+order by counts desc limit 5;
+
+2.统计每个商品的购买次数，并找出热卖前5的商品
+
+select product_name, count(product_name)counts
+from (select
+get_json_object(line,'$.product_name')as product_name
+from tmp_tmall)a
+group by product_name 
+order by counts desc limit 5;
+
+3.分别统计每天男女的消费金额
+
+select times,round(sum(price)) price_sum,user_gender gender
+from (select
+get_json_object(line,'$.product_sale_price')as price,
+get_json_object(line,'$.times')as times,
+get_json_object(line,'$.user_gender')as user_gender
+from tmp_tmall)a 
+group by user_gender,times
+order by times;
+
+4.每天购买金额总数排名前三的用户及金额数。
+
+select c.atimes times,c.auser_name user_name,round(c.sums,0) price_sums from 
+(select b.atimes,b.auser_name,b.sums,row_number()over(partition by b.atimes order by b.sums desc)flag from
+(select a.times atimes,a.user_name auser_name,sum(a.product_sale_price)sums
+from (select
+get_json_object(line,'$.times')as times,
+get_json_object(line,'$.user_name')as user_name,
+get_json_object(line,'$.product_sale_price')as product_sale_price from tmp_tmall)a group by a.user_name,a.times)b)c 
+where c.flag<=3;
+
+
+
+5.每天购买次数排名前3的商品有哪些。
+
+select * from 
+(select b.at,b.ap,b.counts,row_number()over(partition by b.at order by b.counts desc)flag from
+(select a.times at,a.product_name ap,count(a.product_name)counts from 
+(select get_json_object(line,'$.times')as times,
+get_json_object(line,'$.product_name')as product_name
+ from tmp_tmall)a group by a.times,a.product_name)b)c where c.flag<=3;
+
+
+6.统计男女用户比例
+
+select b.count1 female,c.count2 male
+from (select count(distinct(user_name)) count1
+from (select 
+get_json_object(line,'$.user_gender') as gender,
+get_json_object(line,'$.user_name') as user_name
+from tmp_tmall)a where gender=1)b,
+(select count(distinct(user_name)) count2
+from (select 
+get_json_object(line,'$.user_gender') as gender,
+get_json_object(line,'$.user_name') as user_name
+from tmp_tmall)a where gender=0)c
+
+7.统计各个商品种类的购买次数
+select b.category cate,(case
+when   b.category='1' then '女装/大衣'
+when  b.category='2' then '男装/运动户外'
+when  b.category='3' then '女鞋/男鞋/箱包'
+when  b.category='4' then '美妆/个人护理'
+when  b.category='5' then '腕表/眼镜/珠宝饰品'
+when  b.category='6' then '手机/数码/电脑办公'
+when  b.category='8' then '零食/茶酒/进口食品'
+when  b.category='10' then '大家电/生活电器'
+end)product_category,sum(counts)sums from
+(select  a.product_category category,a.product_name name,count(a.product_name)counts from
+(select
+get_json_object(line,'$.product_category.category_id')as product_category,
+get_json_object(line,'$.product_name')as product_name
+from tmp_tmall)a group by a.product_category,a.product_name)b group by b.category
+order by sums;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+select b.times times,round(sum(b.price)) price_sum,
+(case  when b.gender=1 then '女'
+else '男' end) as gender
+from 
+(select *,
+cast(user_gender as char(4)) as gender 
+from (select
+get_json_object(line,'$.product_sale_price')as price,
+get_json_object(line,'$.times')as times,
+get_json_object(line,'$.user_gender')as user_gender
+from tmp_tmall)a)b
+group by b.gender,b.times
+order by b.times;
+
+
+
+
+
+
+
+
+

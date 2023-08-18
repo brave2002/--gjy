@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01如何利用边框绘制三角形</title>
+    <style type="text/css">
+        .box{
+            width: 0px;
+            height: 0px;
+            /*background-color: red;*/
+            /*方法一：需要哪个三角形就把其他的都设置为transparent*/
+            /*border-top: 50px solid transparent;*/
+            /*border-left: 50px solid transparent;*/
+            /*border-right: 50px solid transparent;*/
+            /*border-bottom: 50px solid pink;*/
+            /*方法二：*/
+            border: 50px solid transparent;
+            border-bottom: 50px solid pink;
+
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+</body>
+</html>

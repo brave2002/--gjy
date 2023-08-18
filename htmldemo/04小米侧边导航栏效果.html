@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04小米侧边导航栏效果</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-image: linear-gradient(90deg, #2af598 0%,#009efd 100%);
+        }
+        a{
+            text-decoration: none;
+        }
+        ul{
+            list-style: none;
+
+        }
+        .navigator{
+            width: 228px;
+            /*height: 500px;*/
+            background-color: rgba(255,255,255,0.6);
+            margin: 50px auto 0;
+        }
+        .navigator ul{
+            /*border: 1px solid red;*/
+            padding: 20px 0;
+        }
+        .navigator ul li{
+            /*border: 1px solid pink;*/
+            /*padding-left: 20px ;*/
+            text-indent: 2em;
+            /*padding: 5px 0;!*这里这样写使得标签a超链接范围缩小，只有文字水平方向有*!*/
+            /*修改：这样也可以使得文字居中*/
+            height: 42px;
+            line-height: 42px;
+        }
+        .navigator ul li a{
+            color: black;
+            display: block;
+            background: url("img/04案例/black.png") no-repeat 190px 8px;/*数字代表距离a标签范围左边255px，距离上11px*/
+            background-size: 25px;
+        }
+        .navigator ul li a:hover{
+            background-color: orange;
+            color: white;
+            background-image: url("img/04案例/white.png");
+        }
+    </style>
+</head>
+<body>
+    <div class="navigator">
+        <ul>
+            <li><a href="">手机 平板</a></li>
+            <li><a href="">手机 平板</a></li>
+            <li><a href="">手机 平板</a></li>
+            <li><a href="">手机 平板</a></li>
+            <li><a href="">手机 平板</a></li>
+            <li><a href="">手机 平板</a></li>
+            <li><a href="">手机 平板</a></li>
+            <li><a href="">手机 平板</a></li>
+            <li><a href="">手机 平板</a></li>
+            <li><a href="">手机 平板</a></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06-常用的选项卡菜单效果</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .menu{
+            width: 1000px;
+            /*height: 50px;*/
+            background-color: #f7f7f7;
+            border-radius: 50px;
+            margin: 50px auto 0px;
+            text-align: center;
+            /*放到最大的盒子里面，这样所有标签因为空格产生的空隙就会消失了*/
+            font-size: 0;
+            padding: 10px 0;
+        }
+        .menu a{
+            /*border: 1px solid red;*/
+            text-decoration: none;
+            color: black;
+            display: inline-block;
+
+        }
+        .menu a:hover {
+            background-color: pink;
+            border-radius: 50px;
+            color: white;
+        }
+        .menu a:hover span i{
+            background-color: white;
+        }
+        .menu a span{
+            height: 40px;
+            /*border: 1px solid gray;*/
+            display: inline-block;
+            line-height: 40px;
+            font-size: 18px;
+            padding: 0px 40px;
+        }
+        .menu a span i{
+            /*border: 1px solid pink;*/
+            background-color: pink;
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            vertical-align: middle;/*只针对于行内块级元素*/
+            margin-right: 5px;
+            /*background-image: url("");*/
+        }
+        /*以下代码是针对要放图片在i里面的*/
+        .menu a span .icon1{
+            /*i的窗口位置默认在第一个，所以要移动位置来选择图片*/
+            background-position: 0px -26px;/*上移，右移*/
+        }
+    </style>
+</head>
+<body>
+<div class="menu">
+    <a href="" target="_blank"><span><i class="icon1"></i>备孕期间</span></a>
+    <a href="" target="_blank"><span><i class="icon1"></i>怀孕</span></a>
+    <a href="" target="_blank"><span><i class="icon1"></i>0-1岁</span></a>
+    <a href="" target="_blank"><span><i class="icon1"></i>1-2岁</span></a>
+    <a href="" target="_blank"><span><i class="icon1"></i>2-3岁</span></a>
+
+</div>
+</body>
+</html>

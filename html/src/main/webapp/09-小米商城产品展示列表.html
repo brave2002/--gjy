@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>09-小米商城产品展示列表</title>
+    <style type="text/css">
+        body{
+            background-color: #f5f5f5;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .mimall{
+            width: 1234px;
+            /*height: 615px;*/
+            /*border: 1px solid red;*/
+            margin: 30px auto 0;
+        }
+        .mimall .bigimg01{
+            width: 237px;
+            height: 615px;
+            /*background-color: pink;*/
+            /*border: 1px solid black;*/
+            float: left;
+        }
+        .mimall .bigimg02{
+            width: 997px;
+            height: 615px;
+            /*background-color: pink;*/
+            float: right;
+        }
+        /*清除浮动*/
+        .clearfix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .mimall .bigimg02 ul{
+            /*display: inline-block; 这个好像也可以清除浮动也*/
+            /*border: 1px solid black;*/
+        }
+        .mimall .bigimg02 ul li{
+            height: 300px;
+            width: 234px;
+            /*border: 1px red solid;*/
+            /*background-color: lightblue;*/
+            float: left;
+            margin-left: 14px;
+            margin-bottom: 14px;
+            text-align: center;
+        }
+        .mimall .bigimg02 ul li:nth-last-child(1){
+            height: 143px;
+        }
+        .mimall .bigimg02 ul li:nth-last-child(2){
+            height: 143px;
+        }
+        .mimall .bigimg02 ul li a{
+            height: inherit;
+            width: inherit;
+            background-color: #ffffff;
+            display: inline-block;
+            text-align: center;
+            padding: 10px 0;
+            box-sizing: border-box;/*把盒子变成css3盒子，不受padding的影响*/
+        }
+        .mimall .bigimg02 ul li a h3{
+            font-weight: normal;
+            padding: 4px 0;
+        }
+        .mimall .bigimg02 ul li a .desc{
+            padding: 4px ;
+            white-space: nowrap;/*文字不换行*/
+            /*超出部分打省略号*/
+            text-overflow: ellipsis;
+            overflow: hidden;
+            color: grey;
+            margin: 0 5px;
+
+        }
+        .mimall .bigimg02 ul  li a .price{
+            font-size: 14px;
+            color: orangered;
+            margin-top: 10px;
+        }
+        .mimall .bigimg02 ul  li a .price span{
+            /*color: orangered;*/
+            /*display: inline;*/
+            margin-left: 10px;
+            color: grey;
+
+        }
+        .mimall .bigimg02 ul li a .txt{
+            width: 120px;
+            height: 120px;
+        }
+        .mimall .bigimg02 ul li a .txt{
+            width: 100px;
+            height: 100px;
+            /*background-color: orangered;*/
+            float: left;
+            /*margin: 20px 40px;*/
+            margin-left: 30px;
+            margin-top: 20px;
+        }
+
+        .mimall .bigimg02 ul li a .img{
+            /*background-color: orange;*/
+            width: 80px;
+            height: 80px;
+            float: right;
+            margin-right: 20px;
+            /*line-height: 66px;*/
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="mimall clearfix">
+    <div class="bigimg01">
+        <a href="#"><img src="img09/mi01.webp" alt="picture"height="615px"></a>
+    </div>
+    <div class="bigimg02" >
+        <ul class="clearfix">
+            <li>
+                <a href="#" target="_blank">
+                    <img src="img09/mi02.webp" alt="" width="158px">
+                    <h3>xiaomi Buds Pro 4</h3>
+                    <p class="desc">48db智能降噪耳机 | 古圣文降噪</p>
+                    <p class="price">999元<span><del>1234元</del></span></p>
+
+                </a>
+            </li>
+            <li><a href="#" target="_blank">
+                <img src="img09/mi03.webp" alt="" width="158px">
+                <h3>xiaomi Buds Pro 4</h3>
+                <p class="desc">48db智能降噪耳机 | 古圣文降噪</p>
+                <p class="price">999元<span><del>1234元</del></span></p>
+            </a></li>
+            <li><a href="#" target="_blank">
+                <img src="img09/mi04.webp" alt="" width="158px">
+                <h3>xiaomi Buds Pro 4</h3>
+                <p class="desc">48db智能降噪耳机 | 古圣文降噪</p>
+                <p class="price">999元<span><del>1234元</del></span></p>
+            </a></li>
+            <li><a href="#" target="_blank">
+                <img src="img09/mi05.webp" alt="" width="158px">
+                <h3>xiaomi Buds Pro 4</h3>
+                <p class="desc">48db智能降噪耳机 | 古圣文降噪</p>
+                <p class="price">999元<span><del>1234元</del></span></p>
+            </a></li>
+            <li><a href="#" target="_blank">
+                <img src="img09/mi06.webp" alt="" width="158px">
+                <h3>xiaomi Buds Pro 4</h3>
+                <p class="desc">48db智能降噪耳机 | 古圣文降噪</p>
+                <p class="price">999元<span><del>1234元</del></span></p>
+            </a></li>
+            <li><a href="#" target="_blank">
+                <img src="img09/mi04.webp" alt="" width="158px">
+                <h3>xiaomi Buds Pro 4</h3>
+                <p class="desc">48db智能降噪耳机 | 古圣文降噪</p>
+                <p class="price">999元<span><del>1234元</del></span></p>
+            </a>
+            </li>
+            <li><a href="#" target="_blank">
+                <img src="img09/mi05.webp" alt="" width="158px">
+                <h3>xiaomi Buds Pro 4</h3>
+                <p class="desc">48db智能降噪耳机 | 古圣文降噪</p>
+                <p class="price">999元<span><del>1234元</del></span></p>
+            </a></li>
+            <li><a href="#" target="_blank">
+                <div class="txt">
+                    <p style="color: grey;text-align: left;margin-bottom: 10px" >Xiaomi骨传导耳机</p>
+                    <p style="color: orangered ; text-align: left">699元</p>
+                </div>
+                <div class="img">
+                    <img src="img09/mi08.webp" alt="" width="80">
+                </div>
+            </a></li>
+            <li><a href="#" target="_blank">
+                <div class="txt">
+                    <p style="color: grey;text-align: left;margin-bottom: 10px" >Xiaomi骨传导耳机</p>
+                    <p style="color: orangered ; text-align: left">699元</p>
+                </div>
+                <div class="img">
+                    <img src="img09/mi09.webp" alt="" width="80">
+                </div>
+            </a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

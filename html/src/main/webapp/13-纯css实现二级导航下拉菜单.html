@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>13-纯css实现二级导航下拉菜单</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .menu{
+            width: 100%;
+            height: 60px;
+            background-color: #fd6a88;
+        }
+        .menu .menu_med{
+            width: 1000px;
+            height: 60px;
+            /*background-color: blue;*/
+            margin: 0 auto;
+        }
+        /*清除浮动*/
+        .menu .menu_med ul{
+            /*border: 1px solid black;*/
+            /*display: inline-block;*/
+        }
+        .menu .menu_med .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .menu .menu_med ul li{
+            height: 60px;
+            /*border: 1px solid red;*/
+            display: block;
+            float: left;
+            /*margin: 0 auto;*/
+
+            line-height: 60px;
+            font-size: 20px;
+            /*color: white;*/
+            position: relative;
+        }
+        /*注意：我们不会在li下的a里面添加hover，因为这样的话头部的背景颜色就不会变色*/
+        .menu .menu_med ul li:hover{
+            background-color: #ee4d75;
+            /*display: block;*/
+        }
+        /*为什么要在这里加display，因为当你鼠标点击li的时候就要显示下拉菜单*/
+        .menu .menu_med ul li:hover div{
+            /*background-color: #ee4d75;*/
+            display: block;
+        }
+        .menu .menu_med ul li a{
+            /*background-color: red;*/
+            height: 60px;
+            width: inherit;
+            color: white;
+            display: inline-block;
+            padding: 0 40px;
+        }
+        .menu .menu_med ul li .bot{
+            /*height: 200px;*/
+            width: 200px;
+            background-color: #fd6a88;
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            margin-left: -100px;
+            display: none;
+        }
+        .menu .menu_med ul li .bot a{
+            /*border: 1px solid red;*/
+            /*如果这里height写50px的话，因为上面的li添加了line-height=60px，所以会导致下面的会继承上面的*/
+            height: 60px;
+            width: 200px;
+            padding: 0;
+            margin: 0;
+            /*display: block;*/
+            line-height: 60px;
+            /*display: none;*/
+            text-align: center;
+        }
+        .menu .menu_med ul li .bot a:hover{
+            background-color: #ee4d75;
+
+        }
+    </style>
+</head>
+<body>
+<div class="menu">
+    <div class="menu_med">
+        <ul class="clearfix">
+            <li><a href="">小米手机</a>
+            <div class="bot">
+                <a href="">xiaomi Pro 12</a>
+                <a href="">Xiaomi 12</a>
+                <a href="">xiaomi 12</a>
+                <a href="">xiaomi 青春活力版</a>
+                <a href="">xiaomi civi</a>
+            </div></li>
+            <li><a href="">Redmi小米</a>
+                <div class="bot">
+                    <a href="">xiaomi Pro 12</a>
+                    <a href="">Xiaomi 12</a>
+                    <a href="">xiaomi 12</a>
+                    <a href="">xiaomi 青春活力版</a>
+                    <a href="">xiaomi civi</a>
+                </div></li>
+            <li><a href="">电视</a></li>
+            <li><a href="">笔记本</a></li>
+            <li><a href="">平板</a></li>
+            <li><a href="">耳机</a></li>
+        </ul>
+    </div>
+
+</div>
+</body>
+</html>
